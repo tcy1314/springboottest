@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSONObject;
 
-import cn.itcyw.model.dto.AccessTokenDTO;
+import cn.itcyw.dto.AccessTokenDTO;
 import cn.itcyw.service.LoginService;
 import cn.itcyw.utils.HttpClientUtil;
 
@@ -29,7 +29,7 @@ public class LoginServiceImpl implements LoginService {
 	 * @Description: 获取accesstoken
 	 * @param accessTokenDTO
 	 * @return
-	 * @see cn.itcyw.service.LoginService#getAccessToken(cn.itcyw.model.dto.AccessTokenDTO)
+	 * @see cn.itcyw.service.LoginService#getAccessToken(cn.itcyw.dto.AccessTokenDTO)
 	 * @author tcy
 	 * @date 2020-03-02
 	 */

@@ -1,6 +1,6 @@
 package cn.itcyw.service;
 
-import cn.itcyw.model.dto.AccessTokenDTO;
+import cn.itcyw.dto.AccessTokenDTO;
 
 /**  
  * @Description: 

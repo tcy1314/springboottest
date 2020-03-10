@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import cn.itcyw.model.dto.AccessTokenDTO;
+import cn.itcyw.dto.AccessTokenDTO;
 import cn.itcyw.service.LoginService;
 
 /**  
@@ -37,8 +37,13 @@ public class AuthorizeController {
 		String accessToken = loginService.getAccessToken(accessTokenDTO);
 		String openId = loginService.getOpenId(accessToken);
 		String nickname = loginService.getNickname(accessToken,openId);
-		System.out.println(accessToken+"===="+openId+"====="+nickname);
-		return "index";
+		System.out.println(nickname);
+		if(nickname!=null) {
+			request.getSession().setAttribute("nickname", nickname);
+			System.out.println(request.getSession().getAttribute("nickname"));
+			return "redirect:/";
+		}
+		return "redirect:/";
 		
 	}
 }
